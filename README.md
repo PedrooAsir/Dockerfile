@@ -44,3 +44,29 @@ Y listo, podemos ver en el VS que en "images" se encuentra la imagen que creamos
 
 
 ### 4. Realiza una segunda imagen con el servidor de apache, pero esta vez que incluya una página web personalizada.
+
+El codigo del Dockerfile será:
+
+```
+FROM httpd:latest
+
+COPY ./paginawebb /usr/local/apache2/htdocs/
+
+
+ENV TERM linux
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt update
+RUN apt install -y emacs iproute2 dnsutils iputils-ping
+```
+
+Para el *COPY*, ponemos el html/pagina web donde se encuentra dentro del directorio de donde se encuentran los demas ficheros.
+
+Es decir, cree un nuevo archivo llamado Dockerfile, donde dentro cree un fichero Dockerfile y una nueva carpeta para meter dentro de ella un html.
+
+- Para construir la imagen con una etiqueta: **docker build -t pedrooasir/apache_personalizado .**
+
+- Para ejecutar el contenedor en segundo plano (-d), mapeará el puerto 8080 de tu máquina host al puerto 80 del contenedor (-p 8080:80) y le dará al contenedor el nombre mi_apache_personalizado: **docker run -d -p 8080:80 --name mi_apache_personalizado pedrooasir/apache_personalizado**
+
+
+Finalmente ponemos : **http://localhost:8080** y ya podriamos ver el contenido de la página web.
