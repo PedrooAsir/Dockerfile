@@ -70,3 +70,10 @@ Es decir, cree un nuevo archivo llamado Dockerfile, donde dentro cree un fichero
 
 
 Finalmente ponemos : **http://localhost:8080** y ya podriamos ver el contenido de la página web.
+
+
+- Para subirlo al docker hub: *docker image tag pedrooasir/apache_personalizado:latest pedrooasir apachee_personalizado:latest*
+
+Y despues : *docker image push pedrooasir/apachee_personalizado:latest*
+
+Es equivalente a : *docker image tag mi_imagen:mi_etiqueta mi_usuario/mi_repositorio:mi_etiqueta* y *docker image push mi_usuario/mi_repositorio:mi_etiqueta*
