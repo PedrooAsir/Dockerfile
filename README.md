@@ -39,4 +39,4 @@ docker push pedrooasir/cliente_ubuntu:red (Para subir la imagen con la etiqueta 
 ```
 docker run pedrooasir/cliente_ubuntu:red
 ```
-Y listo, podemos ver en el VS que en "images" se encuentra la imagen que creamos.
+Y listo, podemos ver en el VS que en "images" se encuentra la imagen que creamos junto a la etiqueta que le pusimos.
