@@ -16,3 +16,26 @@ RUN apt install -y emacs iproute2 dnsutils iputils-ping
 
 CMD ["/bin/bash"]
 ```
+
+### 2. Una vez realizada crea un repositorio en docker hub y súbela.
+
+Antes que nada, debemos logearnos con docker para poder subir un repositorio y para ello haremos un **docker login**.
+
+Posteriormente, nos pedirá el nombre y usuario. Ya estaremos dentro.
+
+Ahora procedemos a crear y subir la imagen al repositorio. Para crearlo, simplemente vamos al apartado de *Repositories* y creamos.
+
+- El primer comando será :
+```
+docker build -t pedrooasir/cliente_ubuntu:red .(Para construir la imagen con la etiqueta que estás intentando enviar:)
+```
+- El segundo comando será :
+```
+docker push pedrooasir/cliente_ubuntu:red (Para subir la imagen con la etiqueta que quieras al repositorio.)
+```
+
+### 3. Pruébala con docker run.
+
+
+**docker run pedrooasir/cliente_ubuntu:red** , y listo.
+
