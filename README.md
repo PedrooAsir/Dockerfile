@@ -4,7 +4,7 @@
 
 Para ello, empezaremos creando un archivo llamado *Dockerfile* en la carpeta que quieras.
 
-- Dentro de este archivo creado, metemos el siguiente código:
+- Dentro de Dockerfile, metemos el siguiente código:
 ```
 FROM ubuntu:22.04
 
