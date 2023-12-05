@@ -66,7 +66,7 @@ Es decir, cree un nuevo archivo llamado Dockerfile, donde dentro cree un fichero
 
 - Para construir la imagen con una etiqueta: **docker build -t pedrooasir/apache_personalizado .**
 
-- Para ejecutar el contenedor en segundo plano (-d), mapeará el puerto 8080 de tu máquina host al puerto 80 del contenedor (-p 8080:80) y le dará al contenedor el nombre mi_apache_personalizado: **docker run -d -p 8080:80 --name mi_apache_personalizado pedrooasir/apache_personalizado**
+- Para ejecutar el contenedor en segundo plano (-d), mapeará el puerto 8080 de tu máquina host al puerto 80 del contenedor (-p 8080:80) y le dará al contenedor el nombre "mi_apache_personalizado": **docker run -d -p 8080:80 --name mi_apache_personalizado pedrooasir/apache_personalizado (Etiqueta)**
 
 
 Finalmente ponemos : **http://localhost:8080** y ya podriamos ver el contenido de la página web.
