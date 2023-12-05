@@ -27,7 +27,7 @@ Ahora procedemos a crear y subir la imagen al repositorio. Para crearlo, simplem
 
 - El primer comando será :
 ```
-docker build -t pedrooasir/cliente_ubuntu:red .(Para construir la imagen con la etiqueta que estás intentando enviar:)
+docker build -t pedrooasir/cliente_ubuntu:red .(Para construir la imagen con la etiqueta que estás intentando enviar)
 ```
 - El segundo comando será :
 ```
@@ -36,6 +36,7 @@ docker push pedrooasir/cliente_ubuntu:red (Para subir la imagen con la etiqueta 
 
 ### 3. Pruébala con docker run.
 
-
-**docker run pedrooasir/cliente_ubuntu:red** , y listo.
-
+```
+docker run pedrooasir/cliente_ubuntu:red
+```
+Y listo.
